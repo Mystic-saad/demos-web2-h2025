@@ -2,8 +2,6 @@
   Date : 2025-02-02
   Sujet : Tp1 
 */
-import promptSync from 'prompt-sync' // À commenter si vous travaillez avec un navigateur
-const prompt = promptSync();
 
 // Tableau d'ouvrages (base de données initiale OBLIGATIORE)
 const _ouvrages = [
@@ -22,6 +20,21 @@ const _ouvrages = [
     new Livre("Gatsby le Magnifique", 1925, "Roman", true, "F. Scott Fitzgerald", 180),
     new Film("Star Wars : Episode IV - Un nouvel espoir", 1977, "Science-fiction", false, "George Lucas", 121),
 ];
+class ouvrages {
+  constructor(titre="Inconnu",anneeSortie=0,genre="Inconnu",dispo=false) {
+      this.titre = titre;
+      this.anneeSortie = anneeSortie;
+      this.genre = genre;
+      this.dispo = dispo;
+  }
+}
+
+
+const ouvrages = new Object({titre:"",anneeSortie:0,genre:"",dispo:false});
+
+const Livre = new Object({auteur:"Inconnu",nombPage:0});
+
+const Film = new Object({realisteur:"Inconnu",dureeMinute:0,});
 
 for (let i=0; i < _ouvrages.length; i++) {
     console.log(_ouvrages[i]);
